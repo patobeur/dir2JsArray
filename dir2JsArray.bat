@@ -37,14 +37,19 @@ if "%extensionOutputInput%"=="" (
     set "extensionOutputInput=js"
 )
 
-echo let !fileNameOutput! = [ > !parentFolderName!.js
+REM Ajouter du texte au fichier Output (modifier selon vos besoins)
+echo let !fileNameOutput! = [ > !parentFolderName!.!extensionOutputInput!
 
 for /r %%i in (*.%extensionNameInput%) do (
     set "filePath=%%i"
     set "fileName=%%~nxi"
+	
+	REM Ajouter du texte au fichier Output (modifier selon vos besoins)
     echo { set: '!fileNameOutput!', name: '%%~ni', file: '%%~dpnxi', position: { x: 0, y: 0, z: 0 } }, >> !fileNameOutput!.!extensionOutputInput!
+
 )
 
+REM Ajouter du texte au fichier Output (modifier selon vos besoins)
 echo ] >> !fileNameOutput!.!extensionOutputInput!
 echo export { '!fileNameOutput!' } >> !fileNameOutput!.!extensionOutputInput!
 
