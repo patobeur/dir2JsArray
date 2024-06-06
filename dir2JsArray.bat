@@ -3,14 +3,17 @@ setlocal enabledelayedexpansion
 
 REM Obtenir le chemin complet du dossier contenant le script batch
 set "currentDir=%~dp0"
+
 REM Enlever le dernier caractère "\" s'il existe
 set "currentDir=%currentDir:~0,-1%"
+
 REM Obtenir le nom du dossier parent immédiat
 for %%i in ("%currentDir%") do set "parentFolderName=%%~nxi"
 
 REM Demander à l'utilisateur de saisir un nom pour le fichier
 set "fileNameInput="
 set /p "fileNameInput=Entrez le nom du fichier (ou appuyez sur Entrée pour utiliser '%parentFolderName%'): "
+
 REM Utiliser le nom du dossier parent si l'utilisateur appuie simplement sur Entrée
 if "%fileNameInput%"=="" (
     set "fileNameInput=%parentFolderName%"
@@ -19,6 +22,7 @@ if "%fileNameInput%"=="" (
 REM Demander à l'utilisateur de saisir une extension de fichier
 set "extensionNameInput="
 set /p "extensionNameInput=Entrez le nom l'extension (ou appuyez sur Entrée pour utiliser 'gltf'): "
+
 REM Utiliser le nom du dossier parent si l'utilisateur appuie simplement sur Entrée
 if "%extensionNameInput%"=="" (
     set "extensionNameInput=gltf"
