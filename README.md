@@ -1,3 +1,4 @@
+
 # Traitement de Fichiers par Lot 🚀
 Pour faire du JavaScript, HTML ou autres ! 
 
@@ -8,6 +9,8 @@ Cet outil est conçu pour aider les non-développeurs à traiter rapidement un l
 Bien qu'utile pour les projets utilisant Three.js, cet outil peut également être adapté pour d'autres utilisations nécessitant l'intégration et la gestion de lots de fichiers de différents types.
 
 Voilà, c'est peut être pas grand chose mais c'est pas rien ;)
+
+Autant que tout le monde en profite
 
 ## Fonctionnalités ✨
 
