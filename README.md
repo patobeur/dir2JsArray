@@ -1,5 +1,5 @@
-
-# Traitement de Fichiers par Lot en JavaScript, HTML ou autres ! 🚀
+# Traitement de Fichiers par Lot 🚀
+Pour faire du JavaScript, HTML ou autres ! 
 
 ## Description 📚
 
