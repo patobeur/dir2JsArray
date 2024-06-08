@@ -35,12 +35,15 @@ for /r %%i in (*.%extensionNameInput%) do (
 
     set "width=0"
     set "height=0"
+
     REM Utiliser ImageMagick pour obtenir la taille de l'image
     for /f "tokens=2 delims==x " %%a in ('magick identify -format "%%w==%%h" "%%i"') do (
         set "width=%%a"
         set "height=%%b"
     )
 
+	set "fileSizeKB=0"
+	
     REM Utiliser forfiles pour obtenir la taille du fichier en kilooctets
     for /f %%a in ('forfiles /m "%%~nxi" /c "cmd /c echo @fsize"') do (
         set "fileSize=%%a"
