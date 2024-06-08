@@ -51,5 +51,5 @@ for /r %%i in (*.%extensionNameInput%) do (
 
 REM Ajouter du texte au fichier Output (modifier selon vos besoins)
 echo ] >> !fileNameOutput!.!extensionOutputInput!
-echo export { '!fileNameOutput!' } >> !fileNameOutput!.!extensionOutputInput!
+echo export { !fileNameOutput! } >> !fileNameOutput!.!extensionOutputInput!
 
